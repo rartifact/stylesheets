@@ -38,7 +38,7 @@
 **************************/
 
 /* HEADER BACKGROUND */
-#header, body.res-nightmode #header {background: #000 url(%%banner-4%%) left no-repeat; background-position: 0px 0px;}
+#header, body.res-nightmode #header {background: #000 url(%%banner-5%%) left no-repeat; background-position: 0px 0px;}
 #header-bottom-left{height: 150px;}
 
 /* HEADER SUBREDDITS */
@@ -490,22 +490,30 @@ h1.redditname {display: none;}
 
 /* HEADINGS */
 
-.side .usertext a[href*='#heading'], .sidecontentbox .title, .side .usertext a[href*='#tiheading'] {
-    background: transparent url('%%sidebar-headings%%') no-repeat;
-}
 
 .side .usertext a[href*='#heading'] {
-    display: block;
-    margin-left: -22px;
-    width: 347px;
-    height: 47px;
-    color: #ECEDED!important;
-    cursor: default;
-    width:342px;
+    background: url(%%sidebar-headings%%) no-repeat;
 }
 
+.side .usertext a[href*='#welcomeheading'] {
+    background: url(%%header-welcome%%) no-repeat;
+    line-height: 47px;
+}
 
-.side .usertext a[href*='#tiheading'] {
+.side .usertext a[href*='#resourcesheading'] {
+    background: url(%%header-resources%%) no-repeat;
+    line-height: 47px;
+}
+
+.side .usertext a[href*='#subsheading'] {
+    background: url(%%header-subreddits%%) no-repeat;
+    line-height: 47px;
+}
+
+.side .usertext a[href*='#heading'],
+.side .usertext a[href*='#welcomeheading'],
+.side .usertext a[href*='#resourcesheading'],
+.side .usertext a[href*='#subsheading'] {
     display: block;
     margin-left: -22px;
     width: 347px;
@@ -513,7 +521,6 @@ h1.redditname {display: none;}
     color: #ECEDED!important;
     cursor: default;
     width:342px;
-    font-size:0px;
 }
 
 .res-nightmode .side .usertext .usertext-body .md a[href*='#heading'],
@@ -521,16 +528,20 @@ h1.redditname {display: none;}
     color: #ECEDED!important;
 }
 
-.side .usertext a[href*='#heading'] > em {
+.side .usertext a[href*='#heading'] > em,
+.side .usertext a[href*='#welcomeheading'] > em,
+.side .usertext a[href*='#resourcesheading'] > em,
+.side .usertext a[href*='#subsheading'] > em {
     font-size: 12px;
     line-height: 42px;
     letter-spacing: 0px;
     margin-left: 20px;
     font-weight: bold;
-    color:#ECEDED!important;
-    text-shadow: 2px 2px #000 !important;
+    color: #ECEDED!important;
 }
+
 .side p:nth-child(1) a[href*='#heading'] > em { font-size: 14px; }
+
 
 /* TOP WIKI HEADING */
 .side .usertext a[href*='#intro'] {
@@ -642,8 +653,8 @@ a+div+ul li .RESUserTag, a+div+ul li .voteWeight { display: none !important; }
     color: #ECEDED!important;
     border: 0!important;
     font-weight: bold!important;
+    background: url(%%header-welcome%%) no-repeat;
     font-size:0px;
-    text-shadow: 2px 2px #000 !important;
 }
 .sidecontentbox .title h1:after {content: "Recently Viewed";font-size: 12px;}
 .collapsible .title h1:after {content: "Mod Tools";}
@@ -978,10 +989,10 @@ a.thumbnail img {
 }
 
 .res-nightmode .comments-page .usertext-edit div textarea {
-	background: #121212 !important;
-	color: #CCC !important;
-	width: 490px;
-	margin: 0 !important;
+    background: #121212 !important;
+    color: #CCC !important;
+    width: 490px;
+    margin: 0 !important;
 }
 
 /* Live Preview background fixes & padding */
@@ -992,21 +1003,21 @@ a.thumbnail img {
 }
 
 .RESDialogSmall.livePreview {
-	background: #FFF !important;
-	max-width: 800px !important;
+    background: #FFF !important;
+    max-width: 800px !important;
 }
 .res-nightmode .usertext-edit .RESDialogSmall .md.RESDialogContents, .res-nightmode .RESDialogSmall.livePreview {
-	background: none !important;
+    background: none !important;
 }
 
 /* RES Nightmode Live Preview links */
 .res-nightmode .livePreview .md a{
-	color: #0079d3;
+    color: #0079d3;
 }
 
 /* RES Nightmode comment box text */
 .res-nightmode .usertext-edit .md textarea{
-	color: #DDD;
+    color: #DDD;
 }
 
 
